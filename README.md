@@ -7,4 +7,4 @@ causal inference in observational studies.
 The code includes five machine learning tools: regularized regression using glmnet, random forest implemented via ranger, 
 boosting with xgboost, support vector machines using e1071, and neural networks with nnet.
 
-Also, we can compare results of these five ML tools in the end. 
+At the end of the analysis, users can compare the results across these five machine learning methods.
