@@ -1,10 +1,41 @@
-This R package provides tools for estimating the Average Treatment Effect (ATE) using doubly robust machine learning methods. 
-It implements both Augmented Inverse Probability Weighting (AIPW) and Targeted Maximum Likelihood Estimation (TMLE) with difference 
-machine learning techniques, allowing users to obtain consistent and efficient causal effect estimates under the presence of high-dimensional confounders.
-By combining machine learning algorithms with robust statistical theory, the package offers a flexible and reliable framework for 
-causal inference in observational studies.
+# ML_doubly_robust
 
-The code includes five machine learning tools: regularized regression using glmnet, random forest implemented via ranger, 
-boosting with xgboost, support vector machines using e1071, and neural networks with nnet.
+This repository provides R code for conducting **Doubly Robust Estimation** of the **Average Treatment Effect (ATE)** using modern **machine learning techniques**. Developed for a working paper, the package includes two core components:
 
-At the end of the analysis, users can compare the results across these five machine learning methods.
+- `DR_AIPW.R`: Implements Augmented Inverse Probability Weighting (AIPW)
+- `DR_TMLE.R`: Implements Targeted Maximum Likelihood Estimation (TMLE)
+
+## Overview
+
+The code enables users to estimate causal effects with **high-dimensional confounders** by combining rigorous statistical methods with flexible machine learning models. This approach provides **consistency** and **efficiency** under less restrictive modeling assumptions, making it especially suitable for **observational studies**.
+
+### Key Features
+
+- 🧠 Implements **two doubly robust estimators**: AIPW and TMLE
+- 🔍 Supports **five machine learning models** for nuisance estimation:
+  - `glmnet`: Regularized regression (LASSO / Elastic Net)
+  - `ranger`: Random Forest
+  - `xgboost`: Gradient Boosted Trees
+  - `e1071`: Support Vector Machines (SVM)
+  - `nnet`: Neural Networks
+- 📊 Automatically compares ATE estimates across ML methods
+- 📎 Based on theory from an accompanying working paper
+
+## Applications
+
+- Causal inference in observational data
+- Policy evaluation
+- High-dimensional data analysis
+
+## File Structure
+
+- `DR_AIPW.R`: AIPW estimation with multiple ML learners
+- `DR_TMLE.R`: TMLE estimation with multiple ML learners
+
+## Getting Started
+
+To use this package, simply run either file after ensuring the necessary R packages are installed:
+
+```R
+source("DR_AIPW.R")  # for AIPW estimation
+source("DR_TMLE.R")  # for TMLE estimation
